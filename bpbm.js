@@ -16,9 +16,14 @@
 //ChatGPT (automated Stack Overflow plagiarism), and just normal human looking to Stack Overflow was utilized to produce a large portion of this code.
 //So uh, I can't really claim "ownership" over most of this. Just don't use it to hurt people if that's even possible. that's the license :)
 
+//Change log since release:
+//Added script identifier to image downloads
+
+//Primary Configuration 
+const user = "defaultUser";
+  
 //Configuration - Do not mess with this if you don't know what you are doing!
 const allImagesCached = false;
-
 
 $(document).ready(function(){
   console.log('ready');
@@ -88,8 +93,8 @@ function transformBanner(bannerId) {
 
     // Create a new image element with src attribute
     var imageElement = document.createElement("img");
-    imageElement.src = "https://www.nationstates.net/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg";
-    imageElement.setAttribute("data-imgsrc", "/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg");
+    imageElement.src = "https://www.nationstates.net/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg" + "?script=" + user + "using_Banner_Monitor";
+    imageElement.setAttribute("data-imgsrc", "/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg") + "?script=" + user + "using_Banner_Monitor";
     imageElement.id = bannerId + "_image";
     imageElement.className = "placeholder";
     imageElement.style = "filter: saturate(10%);float: none;";
