@@ -93,8 +93,8 @@ function transformBanner(bannerId) {
 
     // Create a new image element with src attribute
     var imageElement = document.createElement("img");
-    imageElement.src = "https://www.nationstates.net/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg" + "?script=" + user + "using_Banner_Monitor";
-    imageElement.setAttribute("data-imgsrc", "/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg") + "?script=" + user + "using_Banner_Monitor";
+    imageElement.src = "https://www.nationstates.net/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg" + "?script=" + user + "_using_Banner_Monitor";
+    imageElement.setAttribute("data-imgsrc", "/images/banners/samples/" + bannerId.replace("banner_","") + ".jpg") + "?script=" + user + "_using_Banner_Monitor";
     imageElement.id = bannerId + "_image";
     imageElement.className = "placeholder";
     imageElement.style = "filter: saturate(10%);float: none;";
